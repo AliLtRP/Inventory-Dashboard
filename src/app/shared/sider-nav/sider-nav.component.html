@@ -8,11 +8,13 @@
 
         <ul class="flex flex-col gap-12 mt-10">
             @for (icon of icons; track icon.id) {
-            <li class="flex items-center gap-4 cursor-pointer" (click)="handlePositionChange(icon.id)">
-                <img src="/icons/{{icon.name}}" alt="">
-                <p class="font-medium select-none" [class]="icon.id === position() ? 'text-[#1670EF]':'text-[#5D6679]' ">
-                    {{icon.title}}
-                </p>
+            <li>
+                <a class="flex items-center gap-4 cursor-pointer" (click)="handlePositionChange(icon.id)">
+                    <img src="/icons/{{icon.name}}" alt="">
+                    <p class="font-medium select-none" [class]="icon.id === position() ? 'text-[#1670EF]':'text-[#5D6679]' ">
+                        {{icon.title}}
+                    </p>
+                </a>
             </li>
             }
         </ul>
