@@ -1,1 +1,16 @@
-<p class="text-[#000] font-semibold">dashboard works!</p>
+<div class="w-full h-full p-6 grid grid-cols-3 gap-4 pb-32 overflow-scroll">
+    <div class="flex flex-col gap-6 col-span-2">
+        <app-overview-card [select]="0"/>
+        <app-overview-card [select]="1"/>
+    </div>
+
+    <div class="flex flex-col gap-6 col-span-1">
+        <app-summary-card [select]="0"/>
+        <app-summary-card [select]="1"/>
+    </div>
+
+    <div class="col-span-3 grid grid-cols-3 gap-4">
+        <app-bar-chart class="col-span-2"/>
+        <app-order-chart class="col-span-1 h-full"/>
+    </div>
+</div>

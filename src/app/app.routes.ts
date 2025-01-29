@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [{
-    path: 'dashboard',
+    path: '',
     pathMatch: "full",
     loadComponent: () => import("./features/dashboard/dashboard.component").then(m => {return m.DashboardComponent})
 },

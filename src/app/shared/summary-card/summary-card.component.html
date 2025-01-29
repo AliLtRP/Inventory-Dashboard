@@ -1,0 +1,19 @@
+<div class="h-[163px] flex flex-col gap-4 p-4 bg-white rounded-[8px]">
+    <p class="text-[#383E49] font-medium text-[20px]">Inventory Summary</p>
+
+    <div class="flex justify-between">
+        @for (item of getData(); track item.id) {
+        <div class="flex flex-col gap-2 items-center">
+            <img [src]="item.img.includes('.png') ? '/images/' + item.img : '/icons/' + item.img " [alt]="item.title"
+                class="w-6 h-6">
+            <p class="text-[#5D6679] font-semibold">{{item.quantity}}</p>
+            <p class="text-[#5B5B5B] font-medium text-[14px]">{{item.title}}</p>
+        </div>
+
+        @if (item.id !== 2) {
+        <div class="w-[1px] h-20 bg-gray-200"></div>
+        }
+        }
+    </div>
+
+</div>
