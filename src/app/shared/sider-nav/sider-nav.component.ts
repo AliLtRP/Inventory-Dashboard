@@ -15,15 +15,13 @@ export class SiderNavComponent {
   icons: Array<{id: number, name: string, title: string}> = [
     {id: 1, name:'HomeIcon.svg', title: "Dashboard"}, 
     {id: 2, name:'InventoryIcon.svg', title: "Inventory"}, 
-    {id: 3, name:'ReportsIcon.svg', title: "Reports"}, 
-    {id: 4, name:'SuppliersIcon.svg', title: "Suppliers"}, 
-    {id: 5, name:'OrdersIcon.svg', title: "Orders"}, 
-    {id: 6, name: "StoreIcon.svg", title: "Manage Store"}
+    {id: 3, name:'ReportsIcon.svg', title: "Reports"},
   ];
 
   handlePositionChange(position: number) {
     this.position.set(position);
-    const route = this.icons[position-1].title.toLowerCase();
+    let route = this.icons[position-1].title.toLowerCase();
+    if(route === 'dashboard') route = '';
     this.router.navigate([route]);
   }
 }

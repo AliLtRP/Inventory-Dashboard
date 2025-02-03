@@ -1,0 +1,56 @@
+<div class="grid grid-cols-3 gap-6 p-4">
+    <div class="col-span-3 grid grid-cols-3 gap-6">
+        <app-reports-overview class="col-span-2"/>
+        <div class="bg-white rounded-[8px] px-6 py-4">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-[#383E49] text-[20px] font-medium">Best selling category</h2>
+                <a href="#" class="text-[#1366D9] text-sm">See All</a>
+            </div>
+
+            <table class="w-full divide-y divide-gray-200">
+                <thead>
+                    <tr class="text-[#667085] text-sm font-medium">
+                        <th class="text-start pb-4">Category</th>
+                        <th class="text-start pb-4">Turn Over</th>
+                        <th class="text-start pb-4">Increase By</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="py-4">
+                        <td class="py-4 text-[#48505E] font-medium">Vegetable</td>
+                        <td class="py-4 text-[#48505E] font-medium">₹26,000</td>
+                        <td class="py-4 text-[#36C045]">3.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-[#48505E] font-medium">Instant Food</td>
+                        <td class="py-4 text-[#48505E] font-medium">₹22,000</td>
+                        <td class="py-4 text-[#36C045]">2%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-[#48505E] font-medium">Households</td>
+                        <td class="py-4 text-[#48505E] font-medium">₹22,000</td>
+                        <td class="py-4 text-[#36C045]">1.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-span-3 bg-white rounded-[8px] p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-[#383E49] text-[20px] font-medium">Profit & Revenue</h2>
+            <button class="border border-[#ccc] px-3 py-1 rounded-[4px] text-sm">Weekly</button>
+        </div>
+        
+        <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [yaxis]="chartOptions.yaxis"
+            [dataLabels]="chartOptions.dataLabels"
+            [stroke]="chartOptions.stroke"
+            [tooltip]="chartOptions.tooltip"
+            [colors]="chartOptions.colors"
+        ></apx-chart>
+    </div>
+</div>

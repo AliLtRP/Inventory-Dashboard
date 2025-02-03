@@ -1,1 +1,10 @@
-<p>inventory works!</p>
+<div class="h-full rounded-[8px] flex flex-col gap-6 p-4 overflow-scroll">
+    
+    <div class="bg-white flex flex-col gap-4 rounded-[8px] p-4">
+        <p class="text-[#383E49] font-medium text-[20px]">Overall Inventory</p>
+        <app-inventory-card [items]="data" />
+    </div>
+    
+    <app-table [tableData]="tableData"/>
+
+</div>
